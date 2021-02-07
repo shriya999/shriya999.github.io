@@ -2,4 +2,7 @@ source 'https://rubygems.org'
 gem 'nokogiri'
 gem 'rack', '~> 2.0.1'
 gem 'rspec'
-gem 'jekyll'
+gem "jekyll", "~> 4.2"
+gem 'jekyll-sitemap'
+gem 'jekyll-paginate' 
+
