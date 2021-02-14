@@ -50,7 +50,6 @@
         </table>
 
 
-
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -129,7 +128,6 @@
 	</table>
 
 
-	<br>
 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -140,7 +138,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat != 'research' and cat == 'work' %}
+          {% if cat == 'work' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle; min-width:120px">
               <img src="{{post.image}}" alt="project image" style="width:auto; max-width:100%;" />
@@ -150,6 +148,41 @@
 		{{post.title}} at <a href={{post.companylink}}> {{ post.company }} </a> </h3>
 		<br>
 		<em> {{ post.duration }} </em>  ||  <em> {{ post.techstack }} </em>
+              <br>
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Research Projects</h2>
+		<p>
+                These are the research projects I did during my bachelors at BITS Pilani Goa.
+              </p>
+            </td>
+          </tr>
+        </table>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'researchproject' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle; min-width:120px">
+              <img src="{{post.image}}" alt="project image" style="width:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3> {{post.title}} </h3>
+		<br>
+		<em> {{ post.duration }} </em>
+		<br>
+		<em> {{ post.advisors }} </em> 
               <br>
               <p></p>
               {{ post.excerpt }}
@@ -171,6 +204,7 @@
             </td>
           </tr>
         </table>
+
       </td>
     </tr>
   </table>
