@@ -3,7 +3,8 @@ layout: post
 title:  "Software Development Engineer"
 company: "Microsoft R&D"
 companylink: "https://www.microsoft.com"
-duration:   "Bangalore, India. Aug 2020 - Present"
+location:  "Bangalore, India"
+duration:   "Aug 2020 - Present"
 image: /images/microsoft.png
 categories: work
 techstack: "Backend - C#, .NET"

@@ -25,6 +25,7 @@
               <h1>
                 Shriya T.P. Gupta
               </h1>
+		<br>
               </p>
               <p>Hi! I am Shriya, currently working as a Software Engineer at <a href="https://www.microsoft.com">Microsoft</a>. I recently graduated with a B.Eng. in Computer Science from <a href="https://www.bits-pilani.ac.in/goa/">BITS Pilani Goa Campus, India</a>.
               </p>
@@ -34,7 +35,6 @@
               </p>
 		<p>
 		My research interests broadly span the intersections of artificial intelligence and computational neuroscience, focusing on deep learning based visual perception tasks. 
-               
               </p>
               <p style="text-align:center">
                 <a href="mailto:shriyatp99@gmail.com">Email</a> &nbsp/&nbsp
@@ -49,7 +49,9 @@
           </tr>
         </table>
 
+	<br>
 
+	<br>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -93,8 +95,11 @@
           {% endfor %}
           {% endfor %}
         </table>
+	<br>
 
+	<br>
 
+	<br>
 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -113,7 +118,6 @@
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3> 
 		{{post.title}} at <a href={{post.companylink}}> {{ post.company }} </a> </h3>
-		<br>
               <br>
               <em>{{post.duration}}</em>
               <br>
@@ -126,8 +130,26 @@
           {% endfor %}
           {% endfor %}
 	</table>
+	<br>
 
+	<br>
 
+	<br>	
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Awards and Distinctions</h2>
+		<br>
+		<br>
+		<ul style="padding:0%;"><li>Awarded the IEEE Computational Intelligence Society travel grant for paper presentation at IJCNN, which was organised as part of the <a href="https://wcci2020.org/">IEEE World Congress on Computational Intelligence</a>. (2020)</li><br><li>Received full-funding for pursuing a bachelor thesis at DFKI through the research grant from German Federal Ministry of Economic Affairs and Energy under the project <a href="https://www.dfki.de/en/web/research/projects-and-publications/projects-overview/projekt/ki-absicherung/">KI-Absicherung</a>. (2020)</li><br><li> Awarded the Institute facilitation scholarship for paper presentation at ICISDM. (2019)</li><br><li> Received an outstanding academic performance certificate from the Central Board of Secondary Education for being amongst the top 0.1% of successful candidates in Computer Science and English. (2016)</li></ul>
+            </td>
+          </tr>
+	</table>
+	<br>
+
+	<br>
+	
+	<br>
 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -140,14 +162,16 @@
           {% for cat in post.categories %}
           {% if cat == 'work' %}
           <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle; min-width:120px">
+            <td style="padding:2.5%;width:25%;vertical-align:middle; min-width:150px">
               <img src="{{post.image}}" alt="project image" style="width:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3> 
 		{{post.title}} at <a href={{post.companylink}}> {{ post.company }} </a> </h3>
 		<br>
-		<em> {{ post.duration }} </em>  ||  <em> {{ post.techstack }} </em>
+		<em> {{ post.location }} . {{ post.duration }} </em>
+		<br>
+		<em> Technology: {{ post.techstack }} </em> 
               <br>
               <p></p>
               {{ post.excerpt }}
@@ -157,8 +181,41 @@
           {% endfor %}
           {% endfor %}
         </table>
+	<br>
 
+	<br>
 
+	<br>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Academic Activities</h2>
+            </td>
+          </tr>
+        </table>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'acadactivity' %}
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h3> {{post.title}} </h3>
+		<br>
+		<em> {{ post.duration }} </em>
+		<br>
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+	  {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+	<br>
+
+	<br>
+
+	<br>
 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
@@ -192,8 +249,78 @@
           {% endfor %}
           {% endfor %}
         </table>
+	<br>
 
+	<br>
+	
+	<br>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Course Projects</h2>
+		<p>
+                These are the projects I have done as part of my undergraduate curriculum.
+              </p>
+            </td>
+          </tr>
+        </table>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'courseproject' %}
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h3> {{post.title}} </h3>
+		<br>
+		<em> {{ post.duration }} </em>
+		<br>
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+	<br>
 
+	<br>
+
+	<br>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Volunteering Experience</h2>
+            </td>
+          </tr>
+        </table>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'volunteer' %}
+          <tr>
+	   <td style="padding:5.5%;width:25%;vertical-align:middle; min-width:120px">
+              <img src="{{post.image}}" alt="project image" style="width:auto; max-width:70%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>  
+		<a href={{post.companylink}}> {{ post.company }} </a> </h3>
+		<br>
+		<em> {{ post.duration }} </em>
+		<br>
+		<em> {{ post.role }} </em>
+		<br>
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+	  {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+	<br>
+
+	
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:0px">

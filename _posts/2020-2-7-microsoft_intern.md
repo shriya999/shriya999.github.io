@@ -3,7 +3,8 @@ layout: post
 title:  "Software Development Intern"
 company: "Microsoft R&D"
 companylink: "https://www.microsoft.com"
-duration:   "Bangalore, India. May 2019 - July 2019"
+location: "Bangalore, India"
+duration:   "May 2019 - July 2019"
 image: /images/microsoft.png
 categories: work
 techstack: "Frontend - Javascript, Android Studio"
